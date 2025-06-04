@@ -17,7 +17,7 @@ export default function Home (){
       }
     }
   
-  let fetchData=async()=>{
+async function fetchData(){
     setPage(page+1)
     let response = await fetch(`https://newsapi.org/v2/everything?q=${searchParams.get("q")??"All"}&cricket&language=${searchParams.get("language")??"hi"}&page=${page}&pageSize=24&sortBy=publishedAt&apiKey=aa54441416614963b03a0ab6031a2d97`)
     response = await response.json()
